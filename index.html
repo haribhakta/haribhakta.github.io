@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>
+        Percentage Calculator
+    </title>
+</head>
+<script>
+    function calculate() {
+        var total, death, recover, pdeath, precover;
+        total = parseInt(document.getElementById("txttotal").value);
+        death = parseInt(document.getElementById("txtdeath").value);
+        recover = parseInt(document.getElementById("txtrecover").value);
+        pdeath = death / total * 100;
+        precover = recover / total * 100;
+
+        document.getElementById("deathpercent").innerHTML = pdeath + "%";
+        document.getElementById("recoverpercent").innerHTML = precover + "%";
+    }
+</script>
+
+<body style="background-color:lemonchiffon;">
+    <h1>Corona Virus Pendemic</h1>
+    <hr>
+    <table id="tbl " border=1 cellspacing=0 cellpadding=3 style="background-color:gainsboro;">
+        <tr>
+            <th colspan=2>
+                <b>Percent Calculator</b>
+            </th>
+        </tr>
+        <tr>
+            <td>Enter Name of Country:</td>
+            <td><input type="text " id="txtcountry" /></td>
+        </tr>
+        <tr>
+            <td>Enter Total Infected cases: </td>
+            <td><input type="text " id="txttotal" /></td>
+        </tr>
+        <tr>
+            <td>Enter Death Cases: </td>
+            <td><input type="text " id="txtdeath" /></td>
+        </tr>
+        <tr>
+            <td>Enter Recovered Cases: </td>
+            <td><input type="text " id="txtrecover" /></td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <button onclick="calculate()">Calculate</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Death Cases From Corona Virus :
+            </td>
+            <td>
+                <p id="deathpercent"> %</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Recovered Cases From Corona Virus :
+            </td>
+            <td>
+                <p id="recoverpercent"> %</p>
+            </td>
+        </tr>
+
+    </table>
+    <hr>
+
+</body>
+
+</html>
+
+</html>
+
+</html>
