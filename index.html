@@ -1,81 +1,144 @@
-<html>
+<!DOCTYPE html>
+<html language="en">
 
 <head>
-    <title>
-        Percentage Calculator
-    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Bhakta Acharya</title>
+    <link rel=" stylesheet " href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css " integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh " crossorigin="anonymous ">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
 </head>
-<script>
-    function calculate() {
-        var total, death, recover, pdeath, precover;
-        total = parseInt(document.getElementById("txttotal").value);
-        death = parseInt(document.getElementById("txtdeath").value);
-        recover = parseInt(document.getElementById("txtrecover").value);
-        pdeath = death / total * 100;
-        precover = recover / total * 100;
 
-        document.getElementById("deathpercent").innerHTML = pdeath + "%";
-        document.getElementById("recoverpercent").innerHTML = precover + "%";
-    }
-</script>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 bg-success text-white">
+                Mob: 9855057088,9845080653, Bharatpur-7- Buddhacouck, Chitwa, Nepal e-mail: meharibhakta@gmail.com
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="logo.png">
+            </div>
+            <div class="col-md-7 text-center">
+                <h1 class="display 1"> Hari Bhakta Acharya </h1>
+                <h3 class="display 2"> Bharatpur-7 Chitwan </h3>
+                <h4 class="display 2"> 9855057088 </h4>
 
-<body style="background-color:lemonchiffon;">
-    <h1>Corona Virus Pendemic</h1>
-    <hr>
-    <table id="tbl " border=1 cellspacing=0 cellpadding=3 style="background-color:gainsboro;">
-        <tr>
-            <th colspan=2>
-                <b>Percent Calculator</b>
-            </th>
-        </tr>
-        <tr>
-            <td>Enter Name of Country:</td>
-            <td><input type="text " id="txtcountry" /></td>
-        </tr>
-        <tr>
-            <td>Enter Total Infected cases: </td>
-            <td><input type="text " id="txttotal" /></td>
-        </tr>
-        <tr>
-            <td>Enter Death Cases: </td>
-            <td><input type="text " id="txtdeath" /></td>
-        </tr>
-        <tr>
-            <td>Enter Recovered Cases: </td>
-            <td><input type="text " id="txtrecover" /></td>
-        </tr>
-        <tr>
-            <td>
+            </div>
+            <div class="col-md-2 float-right">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="logoprogram.png">
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-md bg-success navbar-dark">
+            <a class=" navbar-brand " href="# ">Home</a>
+            <button class="navbar-toggler " type="button " data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="# ">Link</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="# ">Link</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class=" nav-link " href="# ">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class=" col-md-12 text-danger bg-black-slight">
+            <marquee><b>This is scrolling notice ...</b></marquee>
+        </div>
 
-            </td>
-            <td>
-                <button onclick="calculate()">Calculate</button>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Death Cases From Corona Virus :
-            </td>
-            <td>
-                <p id="deathpercent"> %</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Recovered Cases From Corona Virus :
-            </td>
-            <td>
-                <p id="recoverpercent"> %</p>
-            </td>
-        </tr>
+    </div>
+    <div class="container">
 
-    </table>
-    <hr>
+        <div class=" row">
+            <div class="col-md-9">
+                <!-- sliding of picture Carousel Wrapper-->
+                <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel" data-interval="500" data-wrap="true">
+                    <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                    </ol>
+                    <!--/.Indicators-->
+                    <!--Slides-->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <div class="view">
+                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">
+                                <div class="mask rgba-black-light"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3 class="h3-responsive">Light mask</h3>
+                                <p>First text</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--Mask color-->
+                            <div class="view">
+                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" alt="Second slide">
+                                <div class="mask rgba-black-strong"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3 class="h3-responsive">Strong mask</h3>
+                                <p>Secondary text</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <!--Mask color-->
+                            <div class="view">
+                                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
+                                <div class="mask rgba-black-slight"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3 class="h3-responsive">Slight mask</h3>
+                                <p>Third text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Slides-->
+                    <!--Controls-->
+                    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <!--/.Controls-->
+                </div>
+                <!-- end sliding /.Carousel Wrapper-->
 
+            </div>
+            <div class="col-md-3 bg-warning">
+                <p>Important Notice!!!</p>
+                <hr size=25 color="blue">
+                <ul>
+                    <li>Notice Link 1</li>
+                    <li>Notice Link 2</li>
+                    <li>Notice Link 3</li>
+                    <li>Notice Link 4</li>
+                    <li>Notice Link 5</li>
+                    <li>Notice Link 6</li>
+                    <li>Notice Link 7</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
 </body>
-
-</html>
-
-</html>
 
 </html>
