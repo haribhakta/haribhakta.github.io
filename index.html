@@ -9,6 +9,19 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+    <script>
+        function calculate() {
+            var total, death, recover, pdeath, precover;
+            total = parseInt(document.getElementById("txttotal").value);
+            death = parseInt(document.getElementById("txtdeath").value);
+            recover = parseInt(document.getElementById("txtrecover").value);
+            pdeath = death / total * 100;
+            precover = recover / total * 100;
+
+            document.getElementById("deathpercent").innerHTML = pdeath + "%";
+            document.getElementById("recoverpercent").innerHTML = precover + "%";
+        }
+    </script>
 
 </head>
 
@@ -21,7 +34,7 @@
         </div>
         <div class="row">
             <div class="col-md-3">
-                <img src="logo.png">
+                <img src="assests/images/logo.png">
             </div>
             <div class="col-md-7 text-center">
                 <h1 class="display 1"> Hari Bhakta Acharya </h1>
@@ -31,7 +44,7 @@
             </div>
             <div class="col-md-2 float-right">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="logoprogram.png">
+                <img src="assests/images/logoprogram.png">
             </div>
         </div>
         <nav class="navbar navbar-expand-md bg-success navbar-dark">
@@ -62,7 +75,7 @@
     </div>
     <div class="container">
 
-        <div class=" row">
+        <div class="row">
             <div class="col-md-9">
                 <!-- sliding of picture Carousel Wrapper-->
                 <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel" data-interval="500" data-wrap="true">
@@ -124,19 +137,150 @@
 
             </div>
             <div class="col-md-3 bg-warning">
-                <p>Important Notice!!!</p>
-                <hr size=25 color="blue">
-                <ul>
-                    <li>Notice Link 1</li>
-                    <li>Notice Link 2</li>
-                    <li>Notice Link 3</li>
-                    <li>Notice Link 4</li>
-                    <li>Notice Link 5</li>
-                    <li>Notice Link 6</li>
-                    <li>Notice Link 7</li>
-                </ul>
+                <h3>COVID-19 Pendemic</h3>
+                <table id="tbl " border=1 cellspacing=0 cellpadding=3 style="background-color:gainsboro;">
+                    <tr>
+                        <th colspan=2>
+                            Death and Infected Calculation
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td><input type="text " id="txtcountry" /></td>
+                    </tr>
+                    <tr>
+                        <td>Total: </td>
+                        <td><input type="text " id="txttotal" /></td>
+                    </tr>
+                    <tr>
+                        <td>Death: </td>
+                        <td><input type="text " id="txtdeath" /></td>
+                    </tr>
+                    <tr>
+                        <td>Recovered: </td>
+                        <td><input type="text " id="txtrecover" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                            <button onclick="calculate()">Calculate</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Death :
+                        </td>
+                        <td>
+                            <p id="deathpercent"> %</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Recovered:
+                        </td>
+                        <td>
+                            <p id="recoverpercent"> %</p>
+                        </td>
+                    </tr>
+
+                </table>
+                <hr>
+
             </div>
 
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 bg-warning">
+                <h1>College Courses</h1>
+                <hr>
+                <ul>
+
+                    <li> College Course list 1 </li>
+                    <li> College Course list 2 </li>
+                    <li> College Course list 3 </li>
+                    <li> College Course list 4 </li>
+                    <li> College Course list 5 </li>
+                    <li> College Course list 6 </li>
+                    <li> College Course list 7 </li>
+                </ul>
+            </div>
+            <div class=" col-md-4 bg-success ">
+                <h1>School Courses</h1>
+                <hr>
+                <ul>
+
+                    <li> School Course list 1 </li>
+                    <li> School Course list 2 </li>
+                    <li> School Course list 3 </li>
+                    <li> School Course list 4 </li>
+                    <li> School Course list 5 </li>
+                    <li> School Course list 6 </li>
+                    <li> School Course list 7 </li>
+                </ul>
+
+            </div>
+            <div class=" col-md-4 bg-warning">
+                <h1>Technical Courses</h1>
+                <hr>
+                <ul>
+                    <li> Technical Course list 1 </li>
+                    <li> Technical Course list 2 </li>
+                    <li> Technical Course list 3 </li>
+                    <li> Technical Course list 4 </li>
+                    <li> Technical Course list 5 </li>
+                    <li> Technical Course list 6 </li>
+                    <li> Technical Course list 7 </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <div clas="footer">
+        <div class="row bg-dark text-white">
+            <div class="col-md-4">
+                <h3> About US</h3>
+                <hr>
+                <ul>
+                    <li> Contact US Link 1 </li>
+                    <li> Contact US Link 2 </li>
+                    <li> Contact US Link 3 </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3> Contact US</h3>
+                <hr>
+                <ul>
+                    <li> Contact US Link 1 </li>
+                    <li> Contact US Link 2 </li>
+                    <li> Contact US Link 3 </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3> Feed Back</h3>
+                <hr/>
+                <form>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label>Comments/ Suggestion</label>
+                        <textarea class="form-control rounded-0" rows="3"></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>
