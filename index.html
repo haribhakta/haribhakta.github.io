@@ -4,14 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Login Here</title>
+<title>Hari Bhakta Acharya</title>
+    <link rel=" stylesheet " href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css " integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh " crossorigin="anonymous ">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
+<style>
+.modal {
+  display: block; /* set none for Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 25%; /* Could be more or less, depending on screen size */
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+</style>
 </head>
 
 <body>
-    <input type="text" id="userId" placeholder="Enter User Id">
-    <input type="password" id="userPassword" placeholder="Enter Login Password">
-    <button onclick="authenticateUser()">Login Here</button>
-    <p id="message"></p>
+    <!-- The Modal -->
+
+	  <!-- Modal Content -->
+
+
+	    <div class="container">
+	    	<div class="row">
+	    	<label for="uname"><b>Username</b></label>
+	    </div>
+	    <div class="row text-center">
+	      	<input type="text" placeholder="Enter Username" id="userId" required>
+		</div>
+		<div class="row">
+	      	<label for="psw"><b>Password</b></label>
+	    </div>
+	     <div class="row">
+	      	<input type="password" placeholder="Enter Password" id="userPassword" required>
+		</div>
+
+	      <button onclick="authenticateUser()">Login</button>
+ 			<p id="message"></p>
+
+	    </div>
+
+
 </body>
 
 </html>
@@ -31,4 +98,7 @@
             document.getElementById("message").innerHTML = "Login Failure";
         }
     }
+
+
+
 </script>
