@@ -10,19 +10,24 @@
         //document.write(addnumber(12, 12));
         function timer() {
             var d = new Date();
+            var dt = d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
             var h = d.getHours();
             var m = d.getMinutes();
             var s = d.getSeconds();
-            document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+            document.getElementById("time").innerHTML = dt + "::" + h + ":" + m + ":" + s;
             setTimeout(timer, 500);
         }
     </script>
 </head>
 
 <body onload="timer()">
-    <h1 id="time">
-    </h1>
-
+    <h1 id="time"></h1>
+    <h2>Tax Calculating from calling js file through function call </h2>
+    <input type="text" id="txtamt" placeholder="enter texable amount">
+    <input type="button" onclick="getElementById('tax').innerHTML= gettax(getElementById('txtamt').value);" value="tax">
+    <p id="tax"> tax amount </p>
 </body>
 
 </html>
+<script>
+</script>
