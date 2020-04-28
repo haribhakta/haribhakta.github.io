@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Here</title>
+    <script src="sales.js"></script>
+    <script>
+        //document.write(addnumber(12, 12));
+        function timer() {
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+            setTimeout(timer, 500);
+        }
+    </script>
+</head>
+
+<body onload="timer()">
+    <h1 id="time">
+    </h1>
+
+</body>
+
+</html>
