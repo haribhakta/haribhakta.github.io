@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html language="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Bhakta Acharya</title>
+    <link rel=" stylesheet " href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css " integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh " crossorigin="anonymous ">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+    <title>Invoice</title>
+    <script>
+        function getvalues() {
+
+            document.getElementById("txtcustomername").value = localStorage.getItem("customername");
+            document.getElementById("txtaddress").value = localStorage.getItem("address");
+            document.getElementById("txtdate").value = localStorage.getItem("date");
+            document.getElementById("txtparticular").value = localStorage.getItem("particular");
+            document.getElementById("txtqty").value = localStorage.getItem("qty");
+            document.getElementById("txtrate").value = localStorage.getItem("rate");
+            document.getElementById("txtamount").value = localStorage.getItem("amount");
+            document.getElementById("txtsubtotal").value = localStorage.getItem("amount");
+            document.getElementById("txttax").value = localStorage.getItem("amount") * 0.13;
+            var t = document.getElementById("txttax").value;
+            var s = document.getElementById("txtsubtotal").value;
+            document.getElementById("txtpayableamt").value = parseFloat(t) + parseFloat(s);
+        }
+    </script>
+</head>
+
+<body onload="getvalues()">
+    <div class="row">
+        <div class="col-md-12">
+            <center>
+                <h1>ABC Shopping Centre Pvt. Ltd.</h1>
+                <h4>Bharatpur Chitwan</h4>
+                <h6>9855057088</h6>
+            </center>
+        </div>
+    </div>
+    <hr size=5 color="red">
+    <center>
+        <h3>Sales Invoice</h3>
+    </center>
+    <hr size=5 color="red">
+    <div class="row">
+        <div class="col-md-6">
+            <label>Customer Name :</label>
+            <input type="text" id="txtcustomername"><br>
+            <label>Address :</label>
+            <input type="text" id="txtaddress">
+        </div>
+        <div class="col-md-6 ">
+            <label>Date :</label>
+            <input type="date" id="txtdate"><br>
+            <button onclick="javascrpt:window.print();">Print</button> <button onclick="javascrpt:window.location='customer.html';">New Invoice </button>
+        </div>
+    </div>
+    <hr size=5 color="red">
+    <div class="row">
+        <div class="col-md-12">
+            <table id="tbl" width="100%" border=1>
+                <tr style="background-color:lightgray;">
+                    <td>Particulars</td>
+                    <td>Quantity</td>
+                    <td>Rate</td>
+                    <td>Amount</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="txtparticular"></td>
+                    <td><input type="text" id="txtqty"></td>
+                    <td><input type="text" id="txtrate"></td>
+                    <td><input type="text" id="txtamount"></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+    <hr size=5 color=" red ">
+    <div class="row ">
+        <div class="col-md-8 ">
+            <ul>
+                <li>Billing Terms and codnitions</li>
+                <li>Error and correct is accecptable</li>
+                <li>Goodes can not be returns at any cost</li>
+            </ul>
+        </div>
+        <div class="col-md-4 ">
+            <table>
+                <tr>
+                    <td>
+                        <label>Sub Total :</label>
+                    </td>
+                    <td>
+                        <input type="text " id="txtsubtotal">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Tax Amount :</label>
+                    </td>
+                    <td>
+                        <input type="text " id="txttax">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Payable Amount :</label>
+                    </td>
+                    <td>
+                        <input type="text " id="txtpayableamt">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row ">
+
+    </div>
+</body>
+
+</html>
+
+</html>
